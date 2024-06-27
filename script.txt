@@ -1,44 +1,36 @@
-document.addEventListener('DOMContentLoaded', function(){
-
-    // retrieve inputs and push of buttons
-
+document.addEventListener('DOMContentLoaded', function() {
+    // retrieving user input
     const userInput = document.getElementById('userInput');
     const addItemButton = document.getElementById('addItem');
     const itemList = document.getElementById('itemList');
     const pickRandomButton = document.getElementById('pickRandom');
     const result = document.getElementById('result');
-
-    // array said items
+    // array
     let items = [];
 
-    // making the addItemButton work
-    addItemButton.addEventListener('click', function(event){
-        // prevent website from refreshing
+    // function of the add item button
+    addItemButton.addEventListener('click', function(event) {
         event.preventDefault();
-
         const value = userInput.value.trim();
-
-        // algo
         if (value) {
             items.push(value);
-            // creating the user input items
             const listItem = document.createElement('li');
             listItem.textContent = value;
-
-            // list the user input items
             itemList.appendChild(listItem);
             userInput.value = '';
+            console.log(items); // Debugging line
         }
     });
 
-    pickRandomButton.addEventListener('click', function(event){
+    // function of picking button
+    pickRandomButton.addEventListener('click', function(event) {
         event.preventDefault();
-
-        if (item.length > 0) {
+        if (items.length > 0) {
             const randomIndex = Math.floor(Math.random() * items.length);
-            result.textContent = `Random pick: ${items [randomIndex]}`;
+            result.textContent = `Random pick: ${items[randomIndex]}`;
+            console.log(`Picked item: ${items[randomIndex]}`); // Debugging line
+        } else {
+            result.textContent = 'No items to pick from.';
         }
     });
-
-
 });
