@@ -28,13 +28,14 @@ document.addEventListener('DOMContentLoaded', function(){
             // list the user input items
             itemList.appendChild(listItem);
             userInput.value = '';
+            console.log(items);
         }
     });
 
     // making the pickRandomButton work
     pickRandomButton.addEventListener('click', function(event){
         // prevent website from refreshing
-        event.preventDefault();
+        // event.preventDefault();
 
         // algo
         if (item.length > 0) {
