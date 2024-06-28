@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function(){
     // making the pickRandomButton work
     pickRandomButton.addEventListener('click', function(event){
         // prevent website from refreshing
-        // event.preventDefault();
+        event.preventDefault();
 
         // algo
-        if (item.length > 0) {
+        if (items.length > 0) {
             const randomIndex = Math.floor(Math.random() * items.length);
             result.textContent = `Random pick: ${items [randomIndex]}`;
 
