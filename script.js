@@ -31,12 +31,21 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
+    // making the pickRandomButton work
     pickRandomButton.addEventListener('click', function(event){
+        // prevent website from refreshing
         event.preventDefault();
 
+        // algo
         if (item.length > 0) {
             const randomIndex = Math.floor(Math.random() * items.length);
             result.textContent = `Random pick: ${items [randomIndex]}`;
+
+            // show picked item
+            console.log(`Picked item: ${items[randomIndex]}`);
+        } else {
+            // error for empty user input
+            result.textContent = 'No items to pick from.';
         }
     });
 
