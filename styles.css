@@ -1,10 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: 	#4b3b42;
+}
 
-@layer base {
-   * {
-     box-sizing: border-box;
-   }
- }
+.container {
+  background-color:#e2cbb0;
+  border: 2rem;
+  border-color: black;
+  border-radius: 5rem;
+  display: inline-block;
+  padding: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.gen-form {
+  align-items: center;
+  justify-content: center;
+}
