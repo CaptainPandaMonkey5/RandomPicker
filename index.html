@@ -15,36 +15,38 @@
       }
     </style>
   </head>
-  <body class="mx-20 my-20 bg-neutral-400 items-center flex justify-center font-mono">
-    <div class="bg-stone-500 border-spacing-32 rounded-lg inline-block p-10 mt-10 mb-10 
-    text-xl shadow-2xl">
+  <body class="bg-neutral-400">
+  <div class="mx-20 my-20 items-center flex justify-center font-mono">
+      <div class="bg-stone-500 border-spacing-32 rounded-lg inline-block p-10 mt-10 mb-10 
+      text-xl shadow-2xl">
 
-      <h1 class="text-center text-2xl font-bold text-white">Random Picker</h1>
+        <h1 class="text-center text-2xl font-bold text-white">Random Picker</h1>
 
-      <div>
-        <form class="items-center justify-center">
-          <div>
-            <label for="num-of-items" class="text-white">Type the Items:</label>
-            <input type="text" id="userInput" placeholder=" " class="pl-2 px-2 focus:outline-none rounded-md" />
-            <button id="addItem" class="bg-zinc-800 px-4 py-2 ml-1 mt-2 rounded-full 
-            text-white hover:bg-zinc-400 shadow hover:shadow-lg hover:shadow-zinc-600">Add</button>
+        <div>
+          <form class="items-center justify-center">
+            <div>
+              <label for="num-of-items" class="text-white">Type the Items:</label>
+              <input type="text" id="userInput" placeholder=" " class="pl-2 px-2 focus:outline-none rounded-md" />
+              <button id="addItem" class="bg-zinc-800 px-4 py-2 ml-1 mt-2 rounded-full 
+              text-white hover:bg-zinc-400 shadow hover:shadow-lg hover:shadow-zinc-600">Add</button>
 
-            <ul id="itemList" class="my-3"></ul>
-            <button id="pickRandom" class="bg-zinc-800 px-4 py-2 rounded-full 
-            text-white hover:bg-zinc-400 shadow hover:shadow-lg hover:shadow-zinc-600">Pick for Me</button>
-          </div>
-        </form>
+              <ul id="itemList" class="my-3"></ul>
+              <button id="pickRandom" class="bg-zinc-800 px-4 py-2 rounded-full 
+              text-white hover:bg-zinc-400 shadow hover:shadow-lg hover:shadow-zinc-600">Pick for Me</button>
+            </div>
+          </form>
+        </div>
+
+        <p id="result"></p>
       </div>
+  </div>
 
-      <p id="result"></p>
-    </div>
-
-      <!-- <footer class="text-beige p-5 w-full bottom-0 left-0">
+      <footer class="text-beige p-5 w-full bottom-0 left-0">
         <div class="flex flex-wrap justify-around px-5">
           <div class="text-center py-2 border-t border-gray-700 mt-5">
             <p class="m-0">&copy; 2024 CaptainPandaMonkey</p>
           </div>
         </div>
-    </footer> -->
+    </footer>
   </body>
 </html>
