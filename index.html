@@ -1,26 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Picker Generator</title>
-    <link href="styles.css" rel="stylesheet">
+    <!-- <link href="styles.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>Random Picker Generator</h1>
-      <form class="gen-form">
-        <div class="gen-container">
-          <label for="num-of-items">Number of Items:</label>
-          <input type="text" id="userInput" placeholder=" " />
-          <button id="addItem">Add</button>
+  <body class="mx-20 my-20 bg-neutral-400 items-center flex justify-center font-mono">
+    <div class="bg-stone-500 border-spacing-32 rounded-lg inline-block p-10 mt-10 mb-10 
+    text-2xl shadow-2xl">
 
-          <ul id="itemList"></ul>
-          <button id="pickRandom">Pick for Me</button>
-        </div>
-      </form>
+      <h1 class="text-center">Random Picker Generator</h1>
+
+      <div>
+        <form class="items-center justify-center">
+          <div>
+            <label for="num-of-items">Number of Items:</label>
+            <input type="text" id="userInput" placeholder=" " class="pl-2 px-2 focus:outline-none rounded-md" />
+            <button id="addItem" class="bg-zinc-800 px-4 py-2 ml-1 rounded-full text-white hover:bg-zinc-400">Add</button>
+
+            <ul id="itemList" class="my-3"></ul>
+            <button id="pickRandom" class="bg-zinc-800 px-4 py-2 rounded-full text-white hover:bg-zinc-400">Pick for Me</button>
+          </div>
+        </form>
+      </div>
+
       <p id="result"></p>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
