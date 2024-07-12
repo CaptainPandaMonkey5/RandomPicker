@@ -1,54 +1,61 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener("DOMContentLoaded", function () {
+  // retrieve inputs and push of buttons
 
-    // retrieve inputs and push of buttons
+  const userInput = document.getElementById("userInput");
+  const addItemButton = document.getElementById("addItem");
+  const itemList = document.getElementById("itemList");
+  const pickRandomButton = document.getElementById("pickRandom");
+  const result = document.getElementById("result");
 
-    const userInput = document.getElementById('userInput');
-    const addItemButton = document.getElementById('addItem');
-    const itemList = document.getElementById('itemList');
-    const pickRandomButton = document.getElementById('pickRandom');
-    const result = document.getElementById('result');
+  // array said items
+  let items = [];
 
-    // array said items
-    let items = [];
+  // making the addItemButton work
+  addItemButton.addEventListener("click", function (event) {
+    // prevent website from refreshing
+    event.preventDefault();
 
-    // making the addItemButton work
-    addItemButton.addEventListener('click', function(event){
-        // prevent website from refreshing
-        event.preventDefault();
+    const value = userInput.value.trim();
 
-        const value = userInput.value.trim();
+    // algo
+    if (value) {
+      items.push(value);
+      // creating the user input items
+      const listItem = document.createElement("li");
+      listItem.textContent = value;
 
-        // algo
-        if (value) {
-            items.push(value);
-            // creating the user input items
-            const listItem = document.createElement('li');
-            listItem.textContent = value;
+      // list the user input items
+      itemList.appendChild(listItem);
+      userInput.value = "";
+      console.log(items);
+    } else {
+      // error for empty user input
+      result.textContent = "No items to add.";
+    }
+  });
 
-            // list the user input items
-            itemList.appendChild(listItem);
-            userInput.value = '';
-            console.log(items);
-        }
-    });
+  // making the pickRandomButton work
+  pickRandomButton.addEventListener("click", function (event) {
+    // prevent website from refreshing
+    event.preventDefault();
 
-    // making the pickRandomButton work
-    pickRandomButton.addEventListener('click', function(event){
-        // prevent website from refreshing
-        event.preventDefault();
+    // algo
+    if (items.length > 0) {
+      const randomIndex = Math.floor(Math.random() * items.length);
+      result.textContent = `Random pick: ${items[randomIndex]}`;
 
-        // algo
-        if (items.length > 0) {
-            const randomIndex = Math.floor(Math.random() * items.length);
-            result.textContent = `Random pick: ${items [randomIndex]}`;
+      // show picked item
+      console.log(`Picked item: ${items[randomIndex]}`);
+    } else {
+      // error for empty user input
+      result.textContent = "No items to pick from.";
+    }
+  });
 
-            // show picked item
-            console.log(`Picked item: ${items[randomIndex]}`);
-        } else {
-            // error for empty user input
-            result.textContent = 'No items to pick from.';
-        }
-    });
+  const clearButton = document.getElementById("clearButton");
 
-
+  clearButton.addEventListener("click", function () {
+    itemList.innerHTML = "";
+    items = [];
+  });
 });
