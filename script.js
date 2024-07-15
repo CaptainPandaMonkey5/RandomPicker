@@ -52,10 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const clearButton = document.getElementById("clearButton");
+const clearButton = document.getElementById("clearButton");
 
-  clearButton.addEventListener("click", function () {
-    itemList.innerHTML = "";
-    items = [];
-  });
+clearButton.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  itemList.innerHTML = "";
+  items = [];
+});
 });
