@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Random Picker Generator</title>
     <link rel="icon" type="image/x-icon" href="assets/Commission-3.png">
-    <!-- <link href="styles.css" rel="stylesheet"> -->
+    <link href="styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
     <style>
@@ -13,18 +13,21 @@
         .content-auto {
           content-visibility: auto;
         }
-      }
-
-      .bg-wave-svg {
+        .bg-wave-svg {
         background-image: url("assets/wave-haikei.svg");
+        background-image: no-repeat;
+        background-size: cover;
       }
 
       .bg-block-wave-svg {
         background-image: url("assets/block-wave-haikei.svg");
+        background-image: center;
+        background-size: cover;
+      }
       }
     </style>
   </head>
-  <body class="bg-wave-svg bg-no-repeat bg-cover">
+  <body class="bg-wave-svg bg-cover">
     <div class="mx-20 my-20 items-center flex justify-center font-mono">
       <div
         class="bg-block-wave-svg bg-center bg-cover border-spacing-32 rounded-lg inline-block p-10 mt-10 mb-10 text-xl shadow-2xl"
