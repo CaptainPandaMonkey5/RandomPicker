@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Random Picker</title>
     <link rel="icon" type="image/x-icon" href="assets/Commission-3.png">
-    <link href="styles.css" rel="stylesheet">
+    <!-- <link href="styles.css" rel="stylesheet"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
     <style>
@@ -14,9 +14,10 @@
           content-visibility: auto;
         }
         .bg-wave-svg {
-        background-image: url("assets/wave-haikei.svg");
-        background-image: no-repeat;
+        background-image: url("assets/blob-scene-haikei.svg");
+        background-position: center;
         background-size: cover;
+        background-attachment: fixed;
       }
 
       .bg-block-wave-svg {
@@ -42,11 +43,11 @@
               type="text"
               id="userInput"
               placeholder=" "
-              class="pl-2 px-2 focus:outline-none rounded-md"
+              class="pl-2 px-2 mb-2 focus:outline-none rounded-md"
               >
               <button
                 id="addItem"
-                class="bg-zinc-500 px-4 py-2 ml-1 mt-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
+                class="bg-zinc-500 text-lg px-4 py-2 ml-1 mt-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
               >
                 Add
               </button>
@@ -54,14 +55,14 @@
               <ul id="itemList" class="my-3 text-white"></ul>
               <button
                 id="pickRandom"
-                class="bg-zinc-500 px-4 py-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
+                class="bg-zinc-500 text-lg px-4 py-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
               >
                 Pick for Me
               </button>
 
               <button
                 id="clearButton"
-                class="bg-zinc-500 px-4 py-2 ml-1 mt-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
+                class="bg-zinc-500 text-lg px-4 py-2 ml-1 mt-2 rounded-full text-white hover:bg-zinc-300 shadow hover:shadow-lg hover:shadow-zinc-600"
               >
                 Clear
               </button>
