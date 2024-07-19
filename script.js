@@ -80,5 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
     itemList.innerHTML = "";
     items = [];
     result.textContent = "";
+
+    if (items.length == 0) {
+      result.textContent = "No items to clear.";
+    }
   });
 });
