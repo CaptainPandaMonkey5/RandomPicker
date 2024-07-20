@@ -67,24 +67,23 @@
       <div
         class="bg-block-wave-svg mb-10 mt-10 inline-block border-spacing-32 rounded-lg bg-cover bg-center p-10 text-xl shadow-2xl"
       >
-        <h1 class="text-center text-2xl font-bold">Random Picker</h1>
-        <p class="text-base text-gray-400">add once or separate using commas</p>
+        <h1 class="text-center text-2xl font-bold">Random Number</h1>
 
         <div>
           <form class="items-center justify-center">
             <div>
-              <label for="userInput">Type the Items:</label>
+              <label for="userInput" class="">How many numbers?</label>
               <input
                 type="text"
                 id="userInput"
-                placeholder=""
-                class="mb-2 h-10 w-64 rounded-md px-2 pl-2 text-black focus:outline-none"
+                placeholder=" "
+                class="mb-2 rounded-md px-2 pl-2 focus:outline-none"
               />
               <button
                 id="addItem"
                 class="ml-1 mt-2 rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
-                Add
+                Enter
               </button>
 
               <ul id="itemList" class="my-3"></ul>
@@ -92,7 +91,7 @@
                 id="pickRandom"
                 class="rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
-                Pick for Me
+                Generate
               </button>
 
               <button
