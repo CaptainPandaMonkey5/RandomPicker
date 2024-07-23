@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     extend: {},
   },
+  daisyui: {
+    themes: ["light", "night", "dim"],
+  },
   plugins: [
     "prettier-plugin-css-order",
     "prettier-plugin-tailwindcss",
