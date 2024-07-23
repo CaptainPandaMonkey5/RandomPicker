@@ -8,7 +8,7 @@
     <!-- <link href="styles.css" rel="stylesheet"> -->
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+    <script src="script3.js"></script>
     <style>
       @layer utilities {
         .content-auto {
@@ -53,7 +53,7 @@
         <a href="randnum.html" class="block rounded p-2 md:inline-block"
           >RandomNumber</a
         >
-        <a href="" class="block rounded p-2 text-gray-400 md:inline-block"
+        <a href="randlist.html" class="block rounded p-2 md:inline-block"
           >RandomizerList</a
         >
         <a href="" class="block rounded p-2 text-gray-400 md:inline-block"
@@ -66,7 +66,7 @@
       <div
         class="bg-block-wave-svg mb-10 mt-10 inline-block border-spacing-32 rounded-lg bg-cover bg-center p-10 text-xl shadow-2xl"
       >
-        <h1 class="text-center text-2xl font-bold">Random Picker</h1>
+        <h1 class="text-center text-2xl font-bold">Randomizer List</h1>
         <p class="py-2 text-base text-gray-400 md:py-1">
           add once or separate using commas
         </p>
@@ -74,7 +74,6 @@
         <div>
           <form class="items-center justify-center">
             <div>
-              <label for="userInput"></label>
               <input
                 type="text"
                 id="userInput"
@@ -88,12 +87,12 @@
                 Add
               </button>
 
-              <ul id="itemList" class="my-3"></ul>
+              <ol id="itemList" class="my-3 list-decimal px-10"></ol>
               <button
-                id="pickRandom"
+                id="Randomizer"
                 class="rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
-                Pick for Me
+                Randomize
               </button>
 
               <button
