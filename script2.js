@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearButton = document.getElementById("clearButton");
   const result = document.getElementById("result");
 
+  let timeoutId;
+
   function getRandomNumberInRange(lower, upper) {
-    preventDefault();
     return Math.floor(Math.random() * (upper - lower + 1)) + lower;
   }
 
-  generateButton.addEventListener("click", function () {
-    preventDefault();
+  generateButton.addEventListener("click", function (event) {
+    event.preventDefault();
     const lowerLimit = parseInt(lowerLimitInput.value);
     const upperLimit = parseInt(upperLimitInput.value);
 
@@ -20,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
       result.textContent = "Please enter valid numbers for both limits.";
       setTimeout(() => {
         result.textContent = "";
-      }, 2000);
+      }, 5000);
       return;
     }
 
     if (upperLimit <= lowerLimit) {
-      preventDefault();
+      event.preventDefault();
       result.textContent = "Upper limit must be higher than lower limit.";
       setTimeout(() => {
         result.textContent = "";
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       result.textContent = "";
     }, 10000);
+    clearTimeout(timeoutId);
   });
 
   clearButton.addEventListener("click", function (event) {
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       result.textContent = "No items to clear.";
       setTimeout(() => {
         result.textContent = "";
-      }, 2000);
+      }, 5000);
     }
   });
 });
