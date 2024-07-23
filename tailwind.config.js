@@ -5,5 +5,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: ["prettier-plugin-css-order", "prettier-plugin-tailwindcss"],
+  plugins: [
+    "prettier-plugin-css-order",
+    "prettier-plugin-tailwindcss",
+    "tailwind-hamburgers",
+  ],
 };
