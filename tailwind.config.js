@@ -8,6 +8,6 @@ module.exports = {
   plugins: [
     "prettier-plugin-css-order",
     "prettier-plugin-tailwindcss",
-    "tailwind-hamburgers",
+    require("daisyui"),
   ],
 };
