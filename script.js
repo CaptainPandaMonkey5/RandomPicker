@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         result.textContent = "No items to add.";
         setTimeout(() => {
           result.textContent = "";
-        }, 2000)
+        }, 2000);
       }
     });
   });
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // If there are no items, set the result text to indicate that
       setTimeout(() => {
         result.textContent = "";
-      }, 2000)
+      }, 2000);
     }
   });
 
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       result.textContent = "No items to clear.";
       setTimeout(() => {
         result.textContent = "";
-      }, 2000)
+      }, 2000);
     }
   });
 });
