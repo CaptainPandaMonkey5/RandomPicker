@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "build:css": "postcss styles.css -o dist/styles.css",
+    "format": "prettier --write ."
+  },
   "devDependencies": {
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.6.5"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "prettier": "3.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.6"
   }
 }

@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         // If the value is empty, set the result text to indicate that there are no items to add
         result.textContent = "No items to add.";
+        setTimeout(() => {
+          result.textContent = "";
+        }, 2000)
       }
     });
   });
@@ -65,8 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Log the picked item to the console
       console.log(`Picked item: ${items[randomIndex]}`);
     } else {
-      // If there are no items, set the result text to indicate that
       result.textContent = "No items to pick from.";
+      // If there are no items, set the result text to indicate that
+      setTimeout(() => {
+        result.textContent = "";
+      }, 2000)
     }
   });
 
@@ -83,6 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (items.length == 0) {
       result.textContent = "No items to clear.";
+      setTimeout(() => {
+        result.textContent = "";
+      }, 2000)
     }
   });
 });

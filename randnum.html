@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Picker</title>
+    <link rel="icon" type="image/x-icon" href="assets/Commission-3.png" />
+    <link href="dist/styles.css" rel="stylesheet" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script2.js" defer></script> <!-- Added defer to ensure DOM is loaded before script -->
+    <style>
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .bg-wave-svg {
+                background-image: url("assets/blob-scene-haikei.svg");
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .bg-block-wave-svg {
+                background-image: url("assets/block-wave-haikei.svg");
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body class="bg-wave-svg bg-cover text-white">
+    <div x-data="{ open: false }" class="mx-auto flex w-full max-w-full flex-col items-center justify-between px-4 py-4 lg:flex-row">
+        <div class="flex w-full items-center justify-between p-2 lg:w-auto">
+            <div class="flex items-center">
+                <h6 class="text-center text-2xl font-semibold">RandomPicker</h6>
+            </div>
+        </div>
+        <div class="{ 'block': open, 'hidden': !open }" class="mt-4 hidden w-full space-y-2 md:mt-0 md:flex md:items-center md:space-x-4 md:space-y-0" id="navbar">
+          <a
+          href="index.html"
+          class="hover:text-shadow shadwo-xl block rounded p-2 md:inline-block"
+          >RandomPicker</a
+        >
+        <a href="randnum.html" class="block rounded p-2 md:inline-block"
+          >RandomNumber</a
+        >
+        <a href="" class="block rounded p-2 text-gray-400 md:inline-block"
+          >RandomizerList</a
+        >
+        <a href="" class="block rounded p-2 text-gray-400 md:inline-block"
+          >RandomDiceRoll</a
+        >
+      </div>
+        </div>
+    </div>
+
+    <div class="mx-20 my-20 flex items-center justify-center font-mono">
+        <div class="bg-block-wave-svg mb-10 mt-10 inline-block border-spacing-32 rounded-lg bg-cover bg-center p-10 text-xl shadow-2xl">
+            <h1 class="text-center text-2xl font-bold mb-2">Random Number</h1>
+            <form class="items-center justify-center">
+                <div>
+                    <input type="number" id="lowerLimit" placeholder="Enter lower limit" class="mb-2 text-black text-center w-full border p-2 rounded-md px-2 pl-2 focus:outline-none" />
+                    <input type="number" id="upperLimit" placeholder="Enter upper limit" class="mb-2 text-black text-center w-full border p-2 rounded-md px-2 pl-2 focus:outline-none" />
+                    <div id="result" class="mt-4 text-lg font-bold"></div>
+                    <button id="generateButton" class="rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600">Generate</button>
+                    <button id="clearButton" class="ml-1 mt-2 rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-beige bottom-0 left-0 w-full p-5">
+        <div class="flex flex-wrap justify-around px-5">
+            <div class="mt-5 border-t border-white py-2 text-center">
+                <p class="m-0">&copy; 2024 CaptainPandaMonkey</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
