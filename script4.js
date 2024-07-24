@@ -1,16 +1,35 @@
-function diceRoll(event) {
-  const diceSidesInput = document.addEventListener("diceSides");
-  const result = document.addEventListener("result");
+document.addEventListener("DOMContentLoaded", function () {
+  function diceRoll(event) {
+    const diceSidesInput = document.getElementById("diceSides");
+    const result = document.getElementById("result");
+    const rollButton = document.getElementById("rollButton");
 
-  // parseInt - converts s to int
+    // parseInt - converts s to int
 
-  const sides = parseInt(diceSidesInput.value, 10);
+    const sides = parseInt(diceSidesInput.value, 10);
 
-  if (isNaN(sides) || sides <= 0) {
-    result.textContent = "Please enter a valid number of sides";
-    return;
+    if (isNaN(sides) || sides <= 0) {
+      result.textContent = "Please enter a valid number of sides";
+      return;
+    }
+
+    const roll = Math.floor(Math.random() * sides) + 1;
+    result.textContent = `You rolled $[roll]`;
   }
 
-  const roll = Math.floor(Math.random() * sides) + 1;
-  result.textContent = `You rolled $[roll]`;
-}
+  rollButton.addEventListener("click", diceRoll);
+
+  clearButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    lowerLimitInput.value = "";
+    upperLimitInput.value = "";
+    result.textContent = "";
+
+    if (!lowerLimitInput.value && !upperLimitInput.value) {
+      result.textContent = "No items to clear.";
+      setTimeout(() => {
+        result.textContent = "";
+      }, 5000);
+    }
+  });
+});
