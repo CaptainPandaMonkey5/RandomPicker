@@ -4,7 +4,7 @@
 
 ## Description
 
-RandomPicker is a web application designed to randomly pick items from a list provided by the user. Originally created in 2024, it was developed to help users randomly select games by their names, but it can be used for any list of items.
+RandomPicker is a web application designed to randomly pick items from a list provided by the user. Originally created in 2024, it was developed to help users randomly select games by their names, but it can be used for any list of items. The application now includes additional features such as a list randomizer and a random number picker.
 
 Background SVGs are from [Haikei](https://haikei.app/) not sponsored.
 My logo is made by Arkus Noble.
