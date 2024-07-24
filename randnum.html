@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dim" class="bg-wave-svg">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,11 @@
     <link rel="icon" type="image/x-icon" href="assets/Commission-3.png" />
     <!-- <link href="styles.css" rel="stylesheet"> -->
     <script src="//unpkg.com/alpinejs" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script2.js"></script>
     <style>
@@ -27,9 +32,17 @@
           background-size: cover;
         }
       }
+      /* remove the buttons for number type input */
+      @layer base {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
     </style>
   </head>
-  <body class="bg-wave-svg bg-cover text-white">
+  <body class="text-white">
     <div
       x-data="{ open: false }"
       class="mx-auto flex w-full max-w-full flex-col items-center justify-between px-4 py-4 lg:flex-row"
@@ -75,24 +88,24 @@
                 type="number"
                 id="lowerLimit"
                 placeholder="Enter lower limit"
-                class="mb-2 w-64 rounded-md border p-2 px-2 pl-2 text-center text-black focus:outline-none md:w-full"
+                class="input mb-2 w-64 rounded-md border border-none p-2 px-2 pl-2 text-center text-white focus:outline-none md:w-full"
               />
               <input
                 type="number"
                 id="upperLimit"
                 placeholder="Enter upper limit"
-                class="mb-2 w-64 rounded-md border p-2 px-2 pl-2 text-center text-black focus:outline-none md:w-full"
+                class="input mb-2 w-64 rounded-md border border-none p-2 px-2 pl-2 text-center text-white focus:outline-none md:w-full"
               />
               <div id="result" class="mt-4 text-lg font-bold"></div>
               <button
                 id="generateButton"
-                class="rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
+                class="btn rounded-full border-none bg-zinc-500 px-4 py-2 text-lg text-white shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
                 Generate
               </button>
               <button
                 id="clearButton"
-                class="ml-1 mt-2 rounded-full bg-zinc-500 px-4 py-2 text-lg shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
+                class="btn ml-1 mt-2 rounded-full border-none bg-zinc-500 px-4 py-2 text-lg text-white shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
                 Clear
               </button>

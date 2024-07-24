@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isNaN(lowerLimit) || isNaN(upperLimit)) {
       event.preventDefault();
-      result.textContent = "Please enter valid numbers for both limits.";
+      result.textContent = "Enter valid numbers for both limits.";
       setTimeout(() => {
         result.textContent = "";
       }, 5000);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (upperLimit <= lowerLimit) {
       event.preventDefault();
-      result.textContent = "Upper limit must be higher than lower limit.";
+      result.textContent = "Upper limit must be higher.";
       setTimeout(() => {
         result.textContent = "";
       }, 2000);
