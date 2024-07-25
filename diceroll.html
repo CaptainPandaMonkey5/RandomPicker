@@ -13,7 +13,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+    <script src="script4.js"></script>
     <style>
       @layer utilities {
         .content-auto {
@@ -30,6 +30,14 @@
           background-image: url("assets/block-wave-haikei.svg");
           background-image: center;
           background-size: cover;
+        }
+      }
+      /* remove the buttons for number type input */
+      @layer base {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
         }
       }
     </style>
@@ -66,40 +74,29 @@
         >
       </div>
     </div>
+
     <div class="mx-20 my-20 flex items-center justify-center font-mono">
       <div
         class="bg-block-wave-svg mb-10 mt-10 inline-block border-spacing-32 rounded-lg bg-cover bg-center p-10 text-xl shadow-2xl"
       >
-        <h1 class="text-center text-2xl font-bold">Random Picker</h1>
-        <p class="py-2 text-base text-gray-400 md:py-1">
-          add once or separate using commas
-        </p>
+        <h1 class="mb-2 text-center text-2xl font-bold">Random Dice Roll</h1>
 
         <div>
           <form class="items-center justify-center">
             <div>
-              <label for="userInput"></label>
               <input
-                type="text"
-                id="userInput"
-                placeholder="Type the Items"
-                class="mb-2 h-10 w-64 rounded-md px-2 pl-2 text-white focus:outline-none"
+                type="number"
+                id="diceSides"
+                placeholder="How many Sides?"
+                class="input input-md mb-2 w-64 rounded-md border border-none px-2 py-5 pl-2 text-center text-lg text-white focus:outline-none md:w-full"
               />
+              <p id="result"></p>
               <button
-                id="addItem"
+                id="rollButton"
                 class="btn ml-1 mt-2 rounded-full border-none bg-zinc-500 px-4 py-2 text-lg text-white shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
               >
-                Add
+                Roll
               </button>
-
-              <ol id="itemList" class="my-3 list-decimal px-10"></ol>
-              <button
-                id="pickRandom"
-                class="btn rounded-full border-none bg-zinc-500 px-4 py-2 text-lg text-white shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
-              >
-                Pick for Me
-              </button>
-
               <button
                 id="clearButton"
                 class="btn ml-1 mt-2 rounded-full border-none bg-zinc-500 px-4 py-2 text-lg text-white shadow hover:bg-zinc-300 hover:shadow-lg hover:shadow-zinc-600"
