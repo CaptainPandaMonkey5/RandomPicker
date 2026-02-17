@@ -1,6 +1,6 @@
 # RandomPicker
 
-[![status: active](https://opensource.twitter.dev/status/active.svg)](https://captainpandamonkey5.github.io/RandomPicker/)
+[![status: unmaintained](https://opensource.twitter.dev/status/unmaintained.svg)](https://opensource.twitter.dev/status/#unmaintained)
 
 ## Description
 
